@@ -90,12 +90,12 @@ export default {
       }
 
       &-wrapper {
-        padding-top: 60px;
+        padding-top: 100px;
         padding-bottom: 100px;
 
         @include tablet {
-          padding-top: 20px;
-          padding-bottom: 20px;
+          padding-top: 40px;
+          padding-bottom: 40px;
         }
       }
     }

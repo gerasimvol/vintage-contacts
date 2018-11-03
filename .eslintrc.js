@@ -22,7 +22,8 @@ module.exports = {
     }],
     'vue/max-attributes-per-line': 'off',
     'vue/require-default-prop': 'off',
-    'prefer-const': 'error'
+    'prefer-const': 'error',
+    'no-useless-escape': 'off'
   },
   parserOptions: {
     parser: 'babel-eslint'
