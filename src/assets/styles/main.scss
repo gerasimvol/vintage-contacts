@@ -2,8 +2,14 @@
 @import './colors.scss';
 @import './fonts.scss';
 @import './typography.scss';
+@import './media.scss';
 
 .container {
   max-width: 1280px;
   margin: 0 auto;
+  padding: 0 20px;
+
+  @include mobileSm {
+    padding: 0 10px;
+  }
 }

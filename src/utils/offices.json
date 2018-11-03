@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Kyiv",
+    "address": {
+      "title": "Global Message Services Ukraine LLC",
+      "location": "Kyiv, Stepan Bandera, 33",
+      "index": "02066",
+      "country": "Ukraine"
+    }
+  },
+  {
+    "name": "New York",
+    "address": {
+      "title": "Headquarters",
+      "location": "1027 Flatbush Ave, Brooklyn, NY",
+      "index": "11226",
+      "country": "USA"
+    }
+  },
+  {
+    "name": "Guangzhou",
+    "address": {
+      "title": "Marketing Department",
+      "location": "58F7 Baiyun, Guangzhou",
+      "index": "510000",
+      "country": "China"
+    }
+  },
+  {
+    "name": "Barcelona",
+    "address": {
+      "title": "Production Office",
+      "location": "Carrer del Consell de Cent, 566",
+      "index": "08013",
+      "country": "Spain"
+    }
+  }
+]

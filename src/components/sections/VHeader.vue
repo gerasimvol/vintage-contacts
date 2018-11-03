@@ -84,10 +84,12 @@ export default {
   @import 'media';
 
   .header {
-    padding: 60px 60px 100px;
+    padding-top: 60px ;
+    padding-bottom: 100px;
 
     @include tablet {
-      padding: 20px 20px 80px;
+      padding-top: 20px ;
+      padding-bottom: 80px;
     }
 
     &-content {
