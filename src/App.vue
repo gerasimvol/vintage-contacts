@@ -1,13 +1,19 @@
 <template>
   <div id="app">
-    <h1>APP</h1>
+    <v-header />
   </div>
 </template>
 
+<script>
+import VHeader from '@/components/sections/VHeader'
+
+export default {
+  components: {
+    VHeader
+  }
+}
+</script>
+
 <style scoped lang="scss">
   @import 'colors';
-
-  h1 {
-    color: $black;
-  }
 </style>

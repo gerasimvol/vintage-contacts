@@ -5,7 +5,7 @@
 ### Run locally
 ```
 npm i
-npm run serve
+npm run dev
 ```
 
 ### Run unit tests
