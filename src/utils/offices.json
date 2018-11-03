@@ -6,6 +6,10 @@
       "location": "Kyiv, Stepan Bandera, 33",
       "index": "02066",
       "country": "Ukraine"
+    },
+    "coordinates": {
+      "lat": 50.4501,
+      "lng": 30.5234
     }
   },
   {
@@ -15,6 +19,10 @@
       "location": "1027 Flatbush Ave, Brooklyn, NY",
       "index": "11226",
       "country": "USA"
+    },
+    "coordinates": {
+      "lat": 40.7127753,
+      "lng": -74.2179326
     }
   },
   {
@@ -24,6 +32,10 @@
       "location": "58F7 Baiyun, Guangzhou",
       "index": "510000",
       "country": "China"
+    },
+    "coordinates": {
+      "lat": 23.12911,
+      "lng": 113.264385
     }
   },
   {
@@ -33,6 +45,10 @@
       "location": "Carrer del Consell de Cent, 566",
       "index": "08013",
       "country": "Spain"
+    },
+    "coordinates": {
+      "lat": 41.3850639,
+      "lng": 2.1734035
     }
   }
 ]

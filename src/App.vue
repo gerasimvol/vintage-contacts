@@ -1,20 +1,20 @@
 <template>
   <div id="app">
     <v-header />
-    <offices />
+    <v-offices />
     <v-footer />
   </div>
 </template>
 
 <script>
 import VHeader from '@/components/sections/VHeader'
-import Offices from '@/components/sections/Offices'
+import VOffices from '@/components/sections/VOffices'
 import VFooter from '@/components/sections/VFooter'
 
 export default {
   components: {
     VHeader,
-    Offices,
+    VOffices,
     VFooter
   }
 }

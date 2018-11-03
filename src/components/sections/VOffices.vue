@@ -15,17 +15,19 @@
             </li>
           </ul>
           <section class="offices__office">
-            <h3 class="office__title text_light">{{ selectedOffice.title }}</h3>
+            <h3 class="office__title text_light">{{ selectedOffice.address.title }}</h3>
             <address class="office__address text_light">
-              {{ selectedOffice.location }}<br>
-              {{ selectedOffice.index }}<br>
-              {{ selectedOffice.country }}
+              {{ selectedOffice.address.location }}<br>
+              {{ selectedOffice.address.index }}<br>
+              {{ selectedOffice.address.country }}
             </address>
           </section>
         </div>
       </section>
       <section class="offices__map-wrapper">
-        <div class="offices__map"></div>
+        <div class="offices__map">
+          <v-map :coordinates="selectedOffice.coordinates" />
+        </div>
       </section>
     </div>
   </main>
@@ -33,9 +35,13 @@
 
 <script>
 import offices from '@/utils/offices.json'
+import VMap from '@/components/VMap'
 
 export default {
-  name: 'Offices',
+  name: 'VOffices',
+  components: {
+    VMap
+  },
   data () {
     return {
       offices,
@@ -44,7 +50,7 @@ export default {
   },
   computed: {
     selectedOffice () {
-      return offices[this.activeOfficeIndex].address
+      return offices[this.activeOfficeIndex]
     }
   },
   methods: {
@@ -136,7 +142,6 @@ export default {
       position: absolute;
       top: 0;
       right: 0;
-      background: gray;
     }
   }
 
