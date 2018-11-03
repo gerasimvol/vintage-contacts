@@ -3,11 +3,12 @@
     :center="coordinates"
     :zoom="9"
     :options="options"
-    style="width: 100%; height: 100%"
+    class="map"
   >
     <gmap-marker
       :icon="icon"
       :position="coordinates"
+      :animation="2"
     />
   </gmap-map>
 </template>
@@ -35,3 +36,11 @@ export default {
   }
 }
 </script>
+
+<style scoped lang="scss">
+  .map {
+    width: 100%;
+    height: 100%;
+  }
+</style>
+

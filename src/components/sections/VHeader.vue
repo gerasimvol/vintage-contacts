@@ -89,7 +89,7 @@ export default {
 
     @include tablet {
       padding-top: 20px ;
-      padding-bottom: 80px;
+      padding-bottom: 60px;
     }
 
     &-content {

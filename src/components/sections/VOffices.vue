@@ -85,13 +85,17 @@ export default {
       position: relative;
       z-index: 2;
 
+      @include tablet {
+        width: 100%;
+      }
+
       &-wrapper {
-        padding-top: 60px ;
+        padding-top: 60px;
         padding-bottom: 100px;
 
         @include tablet {
-          padding-top: 20px ;
-          padding-bottom: 80px;
+          padding-top: 20px;
+          padding-bottom: 20px;
         }
       }
     }
@@ -99,6 +103,10 @@ export default {
     &__list {
       display: flex;
       margin: 38px 0 42px;
+
+      @include mobileSm {
+        flex-wrap: wrap;
+      }
 
       &-item {
         color: $c-white;
@@ -120,6 +128,11 @@ export default {
         &_active {
           color: $c-active;
         }
+
+        @include mobileSm {
+          padding: 10px 0;
+          padding-right: 30px;
+        }
       }
     }
 
@@ -135,6 +148,12 @@ export default {
         width: 100vw;
         height: 100%;
         z-index: 0;
+
+        @include tablet {
+          position: static;
+          width: 100%;
+          height: 300px;
+        }
       }
 
       width: 50%;
@@ -142,6 +161,12 @@ export default {
       position: absolute;
       top: 0;
       right: 0;
+
+      @include tablet {
+        position: static;
+        width: 100%;
+        height: 300px;
+      }
     }
   }
 
