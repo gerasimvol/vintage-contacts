@@ -8,6 +8,7 @@ import './assets/styles/main.scss'
 Vue.use(VueGoogleMaps, {
   load: {
     key: 'AIzaSyAVylLqwU7Q4ltUU2fMINJ7nW0I1cKiu2I',
+    language: 'en',
     libraries: 'places'
   }
 })
