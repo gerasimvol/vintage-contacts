@@ -2,34 +2,72 @@
   <header class="header container">
     <h1>Contacts</h1>
     <div class="header-content">
-      <section>
-        <h2 class="header-content__contacts-title">
-          <span class="header-content__contacts-title-prefix">GMS</span> Headquarters
+      <section class="header-content__section">
+        <h2 class="section-title">
+          <span class="section-title-highlight">GMS</span> Headquarters
         </h2>
-        <div class="header-content__contacts">
-          <div class="contacts__address-and-tel">
-            <address class="contacts__address">
-              Global Message Services Ukraine LLC
-              Bundesstrasse 5 | 3rd Floor
-              6300 Zug
+        <div class="contacts">
+          <div>
+            <address class="contacts__address text_light">
+              Global Message Services Ukraine LLC<br>
+              Bundesstrasse 5 | 3rd Floor<br>
+              6300 Zug<br>
               Switzerland
             </address>
             <a
               href="tel:+41415446200"
-              class="contacts__tel"
+              class="tel text_light"
             >
               +41 41 544 62 00
             </a>
           </div>
-          <!-- <div>
-            email
-            tel
-            form
-          </div> -->
+          <div class="contacts__links">
+            <div class="contacts__link contacts__link_email">
+              <label class="contacts__link-label text_light">Email</label>
+              <a
+                href="mailto:info@gms-worldwide.com"
+                target="_blank"
+                class="contacts__link-href text_bold"
+              >
+                info@gms-worldwide.com
+              </a>
+            </div>
+            <div class="contacts__link contacts__link_msg">
+              <label class="contacts__link-label text_light">Send message</label>
+              <a
+                href="#"
+                target="_blank"
+                class="contacts__link-href text_bold"
+              >
+                Viber us
+              </a>
+            </div>
+            <div class="contacts__link contacts__link_form">
+              <label class="contacts__link-label text_light">Send form</label>
+              <a
+                href="#contact-us-form"
+                class="contacts__link-href text_bold"
+              >
+                Contact us
+              </a>
+            </div>
+          </div>
         </div>
       </section>
-      <section class="header-content__support">
-        <h2>Technical support 24/7</h2>
+
+      <section class="header-content__section">
+        <h2 class="section-title">
+          Technical support <span class="section-title-highlight">24/7</span>
+        </h2>
+        <p class="support__text text_light">
+          GMS understands that it can be hard to follow all new technologies. We regularly provide for all our clients educational trainings to make your operator`s business earn more and better though our best practices.
+        </p>
+        <a
+          href="tel:+41415446200"
+          class="tel text_light"
+        >
+          +41 41 544 62 00
+        </a>
       </section>
     </div>
   </header>
@@ -52,16 +90,67 @@ export default {
     justify-content: space-between;
     margin-top: 48px;
 
-    &__contacts {
-      &-title {
-        margin-bottom: 48px;
-
-        &-prefix {
-          text-transform: uppercase;
-          color: $c-active;
-        }
-      }
+    &__section {
+      width: 45%;
     }
   }
 }
+
+.contacts {
+  display: flex;
+
+  &__links {
+    margin-left: 40px;
+    font-size: 1.6rem;
+  }
+
+  &__link {
+    line-height: 2;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-label {
+      display: block;
+    }
+
+    &-href {
+      display: block;
+      line-height: 2;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $c-active;
+    }
+  }
+
+  &__address {
+    font-size: 1.6rem;
+    line-height: 2;
+  }
+}
+
+.support {
+  &__text {
+    line-height: 2;
+  }
+}
+
+.section-title {
+  margin-bottom: 40px;
+
+  &-highlight {
+    text-transform: uppercase;
+    color: $c-active;
+  }
+}
+
+.tel {
+  display: block;
+  margin-top: 40px;
+  font-size: 2.6rem;
+  color: $c-active;
+  text-decoration: none;
+}
+
 </style>
