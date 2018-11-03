@@ -80,102 +80,102 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import 'colors';
-@import 'media';
+  @import 'colors';
+  @import 'media';
 
-.header {
-  padding: 60px 60px 100px;
-
-  @include tablet {
-    padding: 20px 20px 80px;
-  }
-
-  &-content {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 48px;
+  .header {
+    padding: 60px 60px 100px;
 
     @include tablet {
-      display: block;
+      padding: 20px 20px 80px;
     }
 
-    &__section {
-      width: 48%;
+    &-content {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 48px;
 
       @include tablet {
-        width: 100%;
+        display: block;
+      }
 
-        &:first-child {
-          margin-bottom: 48px;
+      &__section {
+        width: 48%;
+
+        @include tablet {
+          width: 100%;
+
+          &:first-child {
+            margin-bottom: 48px;
+          }
         }
       }
     }
   }
-}
 
-.contacts {
-  display: flex;
-
-  @include mobile {
-    display: block;
-  }
-
-  &__links {
-    margin-left: 40px;
-    font-size: 1.6rem;
+  .contacts {
+    display: flex;
 
     @include mobile {
-      margin-left: 0;
-      margin-top: 40px;
+      display: block;
+    }
+
+    &__links {
+      margin-left: 40px;
+      font-size: 1.6rem;
+
+      @include mobile {
+        margin-left: 0;
+        margin-top: 40px;
+      }
+    }
+
+    &__link {
+      line-height: 2;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &-label {
+        display: block;
+      }
+
+      &-href {
+        display: block;
+        line-height: 2;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $c-active;
+      }
+    }
+
+    &__address {
+      font-size: 1.6rem;
+      line-height: 2;
     }
   }
 
-  &__link {
-    line-height: 2;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-
-    &-label {
-      display: block;
-    }
-
-    &-href {
-      display: block;
+  .support {
+    &__text {
       line-height: 2;
+    }
+  }
+
+  .section-title {
+    margin-bottom: 40px;
+
+    &-highlight {
       text-transform: uppercase;
-      text-decoration: none;
       color: $c-active;
     }
   }
 
-  &__address {
-    font-size: 1.6rem;
-    line-height: 2;
-  }
-}
-
-.support {
-  &__text {
-    line-height: 2;
-  }
-}
-
-.section-title {
-  margin-bottom: 40px;
-
-  &-highlight {
-    text-transform: uppercase;
+  .tel {
+    display: block;
+    margin-top: 40px;
+    font-size: 2.6rem;
     color: $c-active;
+    text-decoration: none;
   }
-}
-
-.tel {
-  display: block;
-  margin-top: 40px;
-  font-size: 2.6rem;
-  color: $c-active;
-  text-decoration: none;
-}
 </style>
