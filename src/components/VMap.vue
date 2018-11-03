@@ -30,7 +30,8 @@ export default {
         url: require('@/assets/img/marker.png')
       },
       options: {
-        styles: mapStyle
+        styles: mapStyle,
+        disableDefaultUI: true
       }
     }
   }
