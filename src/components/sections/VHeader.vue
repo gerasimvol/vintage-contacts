@@ -81,17 +81,34 @@ export default {
 
 <style scoped lang="scss">
 @import 'colors';
+@import 'media';
 
 .header {
   padding: 60px 60px 100px;
+
+  @include tablet {
+    padding: 20px 20px 80px;
+  }
 
   &-content {
     display: flex;
     justify-content: space-between;
     margin-top: 48px;
 
+    @include tablet {
+      display: block;
+    }
+
     &__section {
-      width: 45%;
+      width: 48%;
+
+      @include tablet {
+        width: 100%;
+
+        &:first-child {
+          margin-bottom: 48px;
+        }
+      }
     }
   }
 }
@@ -99,9 +116,18 @@ export default {
 .contacts {
   display: flex;
 
+  @include mobile {
+    display: block;
+  }
+
   &__links {
     margin-left: 40px;
     font-size: 1.6rem;
+
+    @include mobile {
+      margin-left: 0;
+      margin-top: 40px;
+    }
   }
 
   &__link {
@@ -152,5 +178,4 @@ export default {
   color: $c-active;
   text-decoration: none;
 }
-
 </style>
