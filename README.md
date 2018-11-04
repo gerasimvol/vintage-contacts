@@ -8,8 +8,8 @@ npm i
 npm run dev
 ```
 
-### Run unit tests
+### Build for production
 ```
-npm run test:unit
+npm run build
 ```
 

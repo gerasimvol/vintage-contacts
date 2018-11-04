@@ -13,6 +13,7 @@
         :value="value"
         :name="$attrs.name"
         class="input__field text_light"
+        :tabindex="$attrs.tabindex"
         @focus="onFocus"
         @blur="onBlur"
         @input="onInput"

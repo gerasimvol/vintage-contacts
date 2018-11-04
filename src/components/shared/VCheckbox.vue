@@ -6,6 +6,8 @@
       class="checkbox__input visually-hidden"
       :checked="value"
       @change="$emit('input', $event.target.checked)"
+      @focus="isFocused = true"
+      @blur="isFocused = false"
     >
     <span class="checkbox__container">
       <span :class="checkmarkClasses"></span>
@@ -29,14 +31,16 @@ export default {
   },
   data () {
     return {
-      id: `input-${this._uid}`
+      id: `input-${this._uid}`,
+      isFocused: false
     }
   },
   computed: {
     checkmarkClasses () {
       return [
         'checkbox__checkmark',
-        { 'checkbox__checkmark_active': this.value }
+        { 'checkbox__checkmark_active': this.value },
+        { 'checkbox__checkmark_focus': this.isFocused }
       ]
     }
   }
@@ -100,6 +104,10 @@ export default {
         &::after {
           transform: rotate(-60deg) scale(1);
         }
+      }
+
+      &_focus {
+        box-shadow: 0px 0px 3px $c-white;
       }
     }
   }

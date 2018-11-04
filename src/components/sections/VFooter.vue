@@ -3,13 +3,17 @@
     <section class="footer-inner container">
       <h2 class="footer__title">Contact Us</h2>
       <div class="footer__content">
-        <form class="content__contact-form">
+        <form
+          class="content__contact-form"
+          @submit.prevent="onFormSubmit"
+        >
           <v-input
             v-model="contactForm.name"
             :validator="$v.contactForm.name"
             name="name"
             type="text"
             label="Name"
+            tabindex="10"
             class="contact-form__input"
           />
           <v-input
@@ -18,6 +22,7 @@
             name="phone"
             type="tel"
             label="Phone"
+            tabindex="11"
             class="contact-form__input"
           />
           <v-input
@@ -26,13 +31,24 @@
             name="email"
             type="email"
             label="Email"
+            tabindex="12"
             class="contact-form__input"
           />
           <v-checkbox
             v-model="isAgree"
             label="I agree the processing of personal data"
+            tabindex="13"
             class="contact-form__input contact-form__input_agreement"
           />
+          <v-button
+            class="contact-form__submit"
+            :disabled="isSubmitDisabled"
+            :loading="isSubmitInProgress"
+            tabindex="14"
+            type="submit"
+          >
+            Get in touch
+          </v-button>
         </form>
         <p class="content__description text_light">
           Please tell us more about your request and give us info about your company and country
@@ -57,7 +73,8 @@ export default {
         phone: '',
         email: ''
       },
-      isAgree: true
+      isAgree: false,
+      isSubmitInProgress: false
     }
   },
   validations: {
@@ -65,6 +82,29 @@ export default {
       name: { required },
       phone: { phone, required },
       email: { email, required }
+    }
+  },
+  computed: {
+    isSubmitDisabled () {
+      return this.$v.$invalid || !this.isAgree || this.isSubmitInProgress
+    }
+  },
+  methods: {
+    async onFormSubmit () {
+      this.isSubmitInProgress = true
+
+      try {
+        const res = await fetch('http://httpbin.org/post', {
+          method: 'POST',
+          body: JSON.stringify(this.contactForm)
+        })
+
+        console.log(await res.json())
+      } catch (err) {
+        console.error(err)
+      } finally {
+        this.isSubmitInProgress = false
+      }
     }
   }
 }
@@ -130,6 +170,10 @@ export default {
   .contact-form {
     &__input {
       margin-bottom: 15px;
+    }
+
+    &__submit {
+      margin-top: 48px;
     }
   }
 </style>

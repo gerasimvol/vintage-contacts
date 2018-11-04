@@ -9,7 +9,9 @@
               v-for="(office, index) in offices"
               :key="`office-${index}`"
               :class="getOfficeClasses(index)"
-              @click="onOfficeSelect(index)"
+              :tabindex="index+5"
+              @keydown.space="onOfficeSelect(index, $event)"
+              @click="onOfficeSelect(index, $event)"
             >
               {{ office.name }}
             </li>
@@ -60,7 +62,9 @@ export default {
         { 'offices__list-item_active': officeIndex === this.activeOfficeIndex }
       ]
     },
-    onOfficeSelect (officeIndex) {
+    onOfficeSelect (officeIndex, e) {
+      e.preventDefault()
+
       this.activeOfficeIndex = officeIndex
     }
   }
@@ -103,9 +107,11 @@ export default {
     &__list {
       display: flex;
       margin: 38px 0 42px;
+      margin-left: -15px;
 
       @include mobileSm {
         flex-wrap: wrap;
+        margin-left: 0;
       }
 
       &-item {
@@ -116,10 +122,6 @@ export default {
         letter-spacing: 2px;
         transition: color 0.3s;
         padding: 10px 15px;
-
-        &:first-child {
-          padding-left: 0;
-        }
 
         &:hover {
           color: $c-active;

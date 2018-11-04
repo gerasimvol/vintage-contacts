@@ -17,6 +17,7 @@
             <a
               href="tel:+41415446200"
               class="tel text_light"
+              tabindex="1"
             >
               +41 41 544 62 00
             </a>
@@ -28,6 +29,7 @@
                 href="mailto:info@gms-worldwide.com"
                 target="_blank"
                 class="contacts__link-href text_bold"
+                tabindex="2"
               >
                 info@gms-worldwide.com
               </a>
@@ -38,6 +40,7 @@
                 href="#"
                 target="_blank"
                 class="contacts__link-href text_bold"
+                tabindex="3"
               >
                 Viber us
               </a>
@@ -47,6 +50,7 @@
               <a
                 href="#contact-us-form"
                 class="contacts__link-href text_bold"
+                tabindex="4"
               >
                 Contact us
               </a>
@@ -65,6 +69,7 @@
         <a
           href="tel:+41415446200"
           class="tel text_light"
+          tabindex="5"
         >
           +41 41 544 62 00
         </a>
@@ -155,12 +160,14 @@ export default {
     &__address {
       font-size: 1.6rem;
       line-height: 2;
+      margin-bottom: 40px;
     }
   }
 
   .support {
     &__text {
       line-height: 2;
+      margin-bottom: 40px;
     }
   }
 
@@ -174,8 +181,6 @@ export default {
   }
 
   .tel {
-    display: block;
-    margin-top: 40px;
     font-size: 2.6rem;
     color: $c-active;
     text-decoration: none;
