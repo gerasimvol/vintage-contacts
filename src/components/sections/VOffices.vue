@@ -13,7 +13,7 @@
               @keydown.space="onOfficeSelect(index, $event)"
               @click="onOfficeSelect(index, $event)"
             >
-              {{ office.name }}
+              <h4>{{ office.name }}</h4>
             </li>
           </ul>
           <section class="offices__office">
