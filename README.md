@@ -1,6 +1,6 @@
 # vintage-contacts
 
-#### [Live demo]()
+#### [Live demo](vintage-contacts.surge.sh)
 
 ### Run locally
 ```
