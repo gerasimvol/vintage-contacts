@@ -19,7 +19,10 @@
       >
     </div>
     <transition name="slide-from-top">
-      <span v-if="validate()" class="input__error text_light">
+      <span
+        v-if="validate()"
+        class="input__error text_light"
+      >
         {{ validate() }}
       </span>
     </transition>
