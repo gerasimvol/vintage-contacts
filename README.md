@@ -1,6 +1,6 @@
 # vintage-contacts
 
-#### [Live demo](https://mathiasbynens.be/notes/safari-reader)
+#### [Live demo](http://gerasim-vintage-contacts.surge.sh)
 
 ### Run locally
 ```
