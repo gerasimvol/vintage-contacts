@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <section class="footer-inner container">
-      <h2 class="footer__title">Contact Us</h2>
+      <h2 id="contact-us" class="footer__title">Contact Us</h2>
       <div class="footer__content">
         <form
           class="content__contact-form"
@@ -103,7 +103,9 @@ export default {
       } catch (err) {
         console.error(err)
       } finally {
-        this.isSubmitInProgress = false
+        setTimeout(() => {
+          this.isSubmitInProgress = false
+        }, 500) // min spinner duration
       }
     }
   }
@@ -174,6 +176,10 @@ export default {
 
     &__submit {
       margin-top: 48px;
+
+      @include mobile {
+        width: 100%;
+      }
     }
   }
 </style>

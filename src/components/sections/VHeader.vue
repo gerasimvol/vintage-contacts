@@ -37,7 +37,7 @@
             <div class="contacts__link contacts__link_msg">
               <label class="contacts__link-label text_light">Send message</label>
               <a
-                href="#"
+                href="https://www.viber.com/"
                 target="_blank"
                 class="contacts__link-href text_bold"
                 tabindex="3"
@@ -48,7 +48,7 @@
             <div class="contacts__link contacts__link_form">
               <label class="contacts__link-label text_light">Send form</label>
               <a
-                href="#contact-us-form"
+                href="#contact-us"
                 class="contacts__link-href text_bold"
                 tabindex="4"
               >
@@ -154,6 +154,11 @@ export default {
         text-transform: uppercase;
         text-decoration: none;
         color: $c-active;
+
+        &:focus {
+          outline: none;
+          color: darken($c-active, 10%);
+        }
       }
     }
 
@@ -184,5 +189,10 @@ export default {
     font-size: 2.6rem;
     color: $c-active;
     text-decoration: none;
+
+    &:focus {
+      outline: none;
+      color: darken($c-active, 10%);
+    }
   }
 </style>

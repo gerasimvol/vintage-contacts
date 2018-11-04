@@ -49,6 +49,7 @@ export default {
 
 <style scoped lang="scss">
   @import 'colors';
+  @import 'media';
 
   .checkbox {
     &__container {
@@ -60,6 +61,10 @@ export default {
       display: block;
       font-size: 1.8rem;
       color: $c-white;
+
+      @include mobileSm {
+        font-size: 1.6rem;
+      }
     }
 
     &__checkmark {

@@ -107,11 +107,9 @@ export default {
     &__list {
       display: flex;
       margin: 38px 0 42px;
-      margin-left: -15px;
 
       @include mobileSm {
         flex-wrap: wrap;
-        margin-left: 0;
       }
 
       &-item {
@@ -122,8 +120,17 @@ export default {
         letter-spacing: 2px;
         transition: color 0.3s;
         padding: 10px 15px;
+        outline: none;
+
+        &:first-child {
+          padding-left: 0;
+        }
 
         &:hover {
+          color: $c-active;
+        }
+
+        &:focus {
           color: $c-active;
         }
 
